@@ -173,5 +173,21 @@
 
     <p class="text-gray-600">(Os eventos de Março, Maio, Junho, Agosto e Setembro estão prontos. Deseja que eu preencha aqui também?)</p>
   </section>
+  <script>
+async function loadEvents() {
+  const res = await fetch('./data/events.json', {cache: 'no-store'});
+  const events = await res.json();
+  const list = document.getElementById('event-list');
+  list.innerHTML = '';
+  events.forEach(ev => {
+    const li = document.createElement('li');
+    li.textContent = `${ev.start} - ${ev.title}`;
+    list.appendChild(li);
+  });
+}
+loadEvents();
+</script>
+
+<ul id="event-list"></ul>
 </body>
 </html>
