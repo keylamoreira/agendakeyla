@@ -3,6 +3,13 @@
     "title": "Reunião de Teste",
     "start": "2025-08-08T15:00:00",
     "end": "2025-08-08T16:00:00",
-    "notes": "Este é apenas um evento de teste para verificar a agenda."
+    "location": "SEPLAN",
+    "notes": "Evento de teste",
+    "status": "planned"
+  },
+  {
+    "title": "Tarefa encerrada",
+    "start": "2025-08-01T09:00:00",
+    "status": "done"
   }
 ]
